@@ -23,9 +23,9 @@ public class StudentDao {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
 		// connecting to the assignment2 database
-		// again, need to figure out how to pass db password from secrets file
+		// adding a dummy variable here instead of the actual password before pushing to git 
 		try (Connection connection = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/assignment2", "nets1038_w2026_nj", "***REMOVED***")) {
+				"jdbc:mysql://localhost:3306/assignment2", "nets1038_w2026_nj", "mypassword")) {
 			
 			// using prepared statement to insert values
 			PreparedStatement ps = connection.prepareStatement(INSERT_USERS_SQL);
